@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS cars;
 DROP TABLE IF EXISTS games;
+DROP TABLE IF EXISTS whiskeys;
 
 CREATE TABLE books (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -21,4 +22,11 @@ CREATE TABLE games (
     name TEXT NOT NULL,
     type TEXT NOT NULL,
     num_of_players INT CHECK (num_of_players > 0)
+);
+
+CREATE TABLE whiskeys (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    brand TEXT NOT NULL,
+    type TEXT NOT NULL,
+    price INTEGER NOT NULL
 );
